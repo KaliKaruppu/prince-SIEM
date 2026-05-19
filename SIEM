@@ -1,0 +1,77 @@
+# Prince
+## SOC Analyst | SIEM Engineer | Cybersecurity Practitioner
+I am a cybersecurity enthusiast focused on building real-world SOC and SIEM skills through hands-on labs, log analysis, and threat detection engineering.
+
+---
+
+## About Me
+
+- Security monitoring and log correlation (SOC-focused)
+- Endpoint telemetry analysis using Windows event data
+- Building detection workflows for threat identification
+- Hands-on experience with Windows and SIEM environments
+
+---
+
+## Current Project: SOC Home Lab
+
+A practical SIEM environment built to simulate real-world SOC operations.
+
+Architecture:
+
+Windows Endpoint (Sysmon)
+        │
+        ▼
+Splunk Universal Forwarder
+        │
+        ▼
+Splunk Enterprise (SIEM)
+        │
+        ▼
+Dashboards, Alerts, Detection Rules
+
+---
+
+## Tech Stack
+
+### SIEM & Monitoring
+- Splunk Enterprise (SIEM for log analysis and correlation)
+- Splunk Universal Forwarder (log collection agent)
+- Sysmon (advanced Windows event logging)
+
+### Platforms
+- Windows 10 / 11 (endpoint security lab)
+- Windows Server (Active Directory lab environment)
+- Kali Linux (attack simulation and testing)
+
+### Security Focus Areas
+- SOC operations (Tier 1 → Tier 2)
+- Threat detection engineering
+- Log analysis and incident investigation
+- MITRE ATT&CK framework mapping (learning stage)
+
+---
+
+## Sample SPL Queries
+
+### Process Monitoring
+```spl
+index=* sourcetype="XmlWinEventLog:Microsoft-Windows-Sysmon/Operational"
+| stats count by Image, CommandLineindex=* EventCode=1
+| search CommandLine="*powershell*" OR CommandLine="*cmd*"
+index=* EventCode=1
+| search CommandLine="*powershell*" OR CommandLine="*cmd*"
+
+Learning Roadmap
+SOC Analyst (Tier 1 → Tier 2 progression)
+Splunk SIEM specialization
+CEH v12 practical preparation
+Windows security and log analysis
+Detection engineering fundamentals
+
+Goals
+Build a production-style SOC home lab
+Gain proficiency in Splunk SIEM operations
+Secure a SOC Analyst (L1) role
+Develop detection rules aligned with MITRE ATT&CK
+Grow into a professional cybersecurity role
